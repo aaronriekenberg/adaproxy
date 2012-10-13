@@ -3,6 +3,9 @@ with GNAT.Sockets;
 
 package Socket_Util is
 
+  -- This package shouldn't need to exist.  The GNAT.Sockets package is so ridiculously hard
+  -- to use that I needed to put all the ugliness in one place.
+
   procedure Set_Socket_Non_Blocking(
     Socket : in GNAT.Sockets.Socket_Type);
 
