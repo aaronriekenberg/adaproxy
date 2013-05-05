@@ -163,7 +163,7 @@ package body Epoll is
       Interrupted :=
         ((Ret_Val < 0) and then
          (GNAT.OS_Lib.Errno = EINTR));
-      Next_Timeout := 0;
+      Next_Timeout := Zero_Timeout;
       exit when (Interrupted = False);
     end loop;
 
